@@ -1,21 +1,27 @@
 @import "tailwindcss";
-@theme {
+:root {
   --breakpoint-sm: 54rem;
 }
 .trial-date {
-  @apply text-sm opacity-60;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  opacity: 0.6;
 }
-
 .trial-title {
-  @apply text-lg font-thin;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 100;
 }
-
 .trial-desc {
-  @apply text-sm opacity-70;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  opacity: 0.7;
 }
-
 .trial-details {
-  @apply text-sm text-left pl-5;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  text-align: left;
+  padding-left: 1.25rem;
 }
 
 body {
@@ -76,7 +82,7 @@ body {
     --highlight: oklch(98% 0.05 var(--hue));
   }
 }
-@theme {
+:root {
   --color-bluebase-50: #c7d9e2;
   --color-bluebase-100: #afc8d6;
   --color-bluebase-200: #7fa6b8;
@@ -105,7 +111,7 @@ body {
   background-size: 200% auto;
   color: #fff;
   background-clip: text;
-  text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: textclip 2s linear infinite;
@@ -147,9 +153,6 @@ body {
   position: relative;
   overflow: hidden;
   margin: 0;
-}
-
-.subtitle {
 }
 
 .aurora {
