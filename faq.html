@@ -1,0 +1,594 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/yourcode.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>karam_project</title>
+  </head>
+  <body class="bg-slate-950 text-white">
+    <nav
+      class="flex items-center justify-between px-6 md:px-16 lg:px-24 xl:px-32 py-4 border-b border-gray-300 bg-white relative transition-all z-50 delay-100"
+    >
+      <a href="index.html">
+        <img
+          class="h-9"
+          src="http://cholesterolcare.com.au/wp-content/uploads/2020/03/web-logo.png"
+          alt="dummyLogoColored"
+        />
+      </a>
+
+      <button
+        aria-label="Menu"
+        id="menu-toggle"
+        class="sm:hidden cursor-pointer p-3"
+      >
+        <svg
+          width="21"
+          height="15"
+          viewBox="0 0 21 15"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect width="21" height="1.5" rx=".75" fill="#426287" />
+          <rect x="8" y="6" width="13" height="1.5" rx=".75" fill="#426287" />
+          <rect x="6" y="13" width="15" height="1.5" rx=".75" fill="#426287" />
+        </svg>
+      </button>
+
+      <div
+        id="mobile-menu"
+        class="hidden absolute top-15 left-0 w-full bg-white shadow-md py-4 flex-col items-start px-5 text-sm sm:hidden text-amber-700"
+      >
+        <a
+          href="findus.html"
+          class="block w-full px-3 my-1 py-1 rounded-full outline-transparent hover:outline-amber-700 hover:outline-2 transition-all duration-300"
+          >Find us</a
+        >
+        <a
+          href="aboutus.html"
+          class="block w-full px-3 my-1 py-1 rounded-full outline-transparent hover:outline-amber-700 hover:outline-2 transition-all duration-300"
+          >About us</a
+        >
+        <a
+          href="research.html"
+          class="block w-full px-3 my-1 py-1 rounded-full outline-transparent hover:outline-amber-700 hover:outline-2 transition-all duration-300"
+          >Research</a
+        >
+        <a
+          href="faq.html"
+          class="block w-full px-3 my-1 py-1 rounded-full outline-transparent hover:outline-amber-700 hover:outline-2 transition-all duration-300"
+          >FAQ</a
+        >
+        <a
+          href="forpractitioners.html"
+          class="mt-2 ml-2 inline-block text-white font-medium py-2 px-4 bg-linear-to-tr from-amber-700 to-yellow-600 rounded-full outline-1 outline-transparent outline-offset-2 hover:outline-amber-700 hover:outline-4 hover:opacity-80 transition-all duration-300"
+          >For Practitioners</a
+        >
+      </div>
+
+      <div class="hidden sm:flex items-center gap-x-3 text-amber-700">
+        <a
+          href="findus.html"
+          class="py-2 px-4 hover:underline hover:underline-offset-3"
+        >
+          Find us
+        </a>
+        <a
+          href="aboutus.html"
+          class="py-2 px-4 hover:underline hover:underline-offset-3"
+          >About us</a
+        >
+        <a
+          href="research.html"
+          class="py-2 px-4 hover:underline hover:underline-offset-3"
+          >Research</a
+        >
+        <a
+          href="faq.html"
+          class="py-2 px-4 hover:underline hover:underline-offset-3"
+          >FAQ</a
+        >
+
+        <!-- <div
+        class="hidden lg:flex items-center text-sm gap-2 border border-gray-300 px-3 rounded-full"
+      >
+        <input
+          class="py-1.5 w-full bg-transparent outline-none placeholder-gray-500"
+          type="text"
+          placeholder="Search products"
+        />
+        <svg
+          width="16"
+          height="16"
+          viewBox="0 0 16 16"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M10.836 10.615 15 14.695"
+            stroke="#7A7B7D"
+            stroke-width="1.2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            clip-rule="evenodd"
+            d="M9.141 11.738c2.729-1.136 4.001-4.224 2.841-6.898S7.67.921 4.942 2.057C2.211 3.193.94 6.281 2.1 8.955s4.312 3.92 7.041 2.783"
+            stroke="#7A7B7D"
+            stroke-width="1.2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </div> -->
+        <a
+          href="forpractitioners.html"
+          class="inline-block text-white font-medium py-2 px-4 bg-linear-to-tr from-amber-700 to-yellow-600 rounded-full outline-1 outline-transparent outline-offset-2 hover:outline-amber-700 hover:outline-4 hover:opacity-80 transition-all duration-300"
+          >For Practitioners</a
+        >
+      </div>
+    </nav>
+
+    <script>
+      document
+        .getElementById("menu-toggle")
+        .addEventListener("click", function () {
+          const menu = document.getElementById("mobile-menu");
+          if (menu.classList.contains("hidden")) {
+            menu.classList.remove("hidden");
+            menu.classList.add("flex");
+          } else {
+            menu.classList.add("hidden");
+          }
+        });
+    </script>
+
+    <section class="space-y-5 text-center max-w-3xl mx-auto px-5 py-12">
+      <section class="py-6">
+        <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+          <div class="max-w-2xl mx-auto text-center">
+            <h2
+              class="text-2xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl"
+            >
+              Explore Common Questions
+            </h2>
+          </div>
+          <div class="max-w-3xl mx-auto mt-8 space-y-4 md:mt-16 relative z-0">
+            <div
+              class="transition-all duration-200 opacity-80 bg-white border border-gray-200 shadow-lg rounded-[2vw]"
+            >
+              <button
+                type="button"
+                id="question1"
+                data-state="closed"
+                class="flex items-center justify-between w-full px-4 py-5 sm:p-6 cursor-pointer"
+              >
+                <span class="flex text-base sm:text-lg font-semibold text-black"
+                  >What examination is involved at this clinic?</span
+                >
+                <svg
+                  id="arrow1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  class="w-6 h-6 text-gray-400"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  ></path>
+                </svg>
+              </button>
+              <div
+                id="answer1"
+                style="display: none"
+                class="px-4 pb-5 sm:px-6 sm:pb-6"
+              >
+                <p class="text-gray-700 text-left text-sm sm:text-base">
+                  <b>Transthoracic echocardiogram (TTE)</b> is a non-invasive
+                  ultrasound test that provides detailed images of the heart's
+                  structure and function. (45 mins) <br />
+                  <b>Electrocardiogram (ECG):</b> This test records the
+                  electrical activity of the heart, helping to identify any
+                  irregularities in heart rhythm. (5 mins) <br />
+                  <b>Holter monitor</b> is a portable ECG device worn by the
+                  patient for 24 to 48 hours to continuously monitor heart
+                  rhythm and detect any abnormalities. <br />
+                  <b>Blood tests</b> are conducted to measure cholesterol
+                  levels, including total cholesterol, LDL (bad cholesterol),
+                  HDL (good cholesterol) and triglycerides, which are essential
+                  for assessing cardiovascular health. (?Fasting required)
+                  <br />
+                  These examinations are crucial for diagnosing and managing
+                  cholesterol-related conditions, allowing healthcare providers
+                  to develop personalized treatment plans for patients.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="transition-all duration-200 opacity-80 bg-white border border-gray-200 shadow-lg cursor-pointer rounded-[2vw]"
+            >
+              <button
+                type="button"
+                id="question2"
+                data-state="closed"
+                class="flex items-center justify-between w-full px-4 py-5 sm:p-6 cursor-pointer"
+              >
+                <span class="flex text-base sm:text-lg font-semibold text-black"
+                  >Why is cholesterol testing important?</span
+                >
+                <svg
+                  id="arrow2"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  class="w-6 h-6 text-gray-400"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  ></path>
+                </svg>
+              </button>
+              <div
+                id="answer2"
+                style="display: none"
+                class="px-4 pb-5 sm:px-6 sm:pb-6"
+              >
+                <p class="text-gray-700 text-left text-sm sm:text-base">
+                  It is important to test cholesterol levels because high
+                  cholesterol can lead to the buildup of plaque in the arteries,
+                  increasing the risk of heart disease and stroke. Regular
+                  testing allows for early detection and management of high
+                  cholesterol, helping to prevent cardiovascular complications
+                  and maintain overall heart health.
+                </p>
+              </div>
+            </div>
+            <div
+              class="transition-all duration-200 opacity-80 bg-white border border-gray-200 shadow-lg cursor-pointer rounded-[2vw]"
+            >
+              <button
+                type="button"
+                id="question3"
+                data-state="closed"
+                class="flex items-center justify-between w-full px-4 py-5 sm:p-6 cursor-pointer"
+              >
+                <span class="flex text-base sm:text-lg font-semibold text-black"
+                  >Who can benefit from cholesterol testing?</span
+                >
+                <svg
+                  id="arrow3"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  class="w-6 h-6 text-gray-400"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  ></path>
+                </svg>
+              </button>
+              <div
+                id="answer3"
+                style="display: none"
+                class="px-4 pb-5 sm:px-6 sm:pb-6"
+              >
+                <p class="text-gray-700 text-left text-sm sm:text-base">
+                  Cholesterol testing is beneficial for individuals of all ages,
+                  especially those with risk factors such as a family history of
+                  heart disease, obesity, diabetes or a sedentary lifestyle. It
+                  is also important for individuals who have already been
+                  diagnosed with high cholesterol to monitor their levels and
+                  assess the effectiveness of their treatment plan.
+                </p>
+              </div>
+            </div>
+            <div
+              class="transition-all duration-200 opacity-80 bg-white border border-gray-200 shadow-lg cursor-pointer rounded-[2vw]"
+            >
+              <button
+                type="button"
+                id="question4"
+                data-state="closed"
+                class="flex items-center justify-between w-full px-4 py-5 sm:p-6 cursor-pointer"
+              >
+                <span class="flex text-base sm:text-lg font-semibold text-black"
+                  >Is it normal to have high cholesterol at any age?</span
+                >
+                <svg
+                  id="arrow4"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  class="w-6 h-6 text-gray-400"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  ></path>
+                </svg>
+              </button>
+              <div
+                id="answer4"
+                style="display: none"
+                class="px-4 pb-5 sm:px-6 sm:pb-6"
+              >
+                <p class="text-gray-700 text-left text-sm sm:text-base">
+                  No, it is not normal to have high cholesterol at any age. High
+                  cholesterol can occur due to various factors such as genetics,
+                  diet and lifestyle choices. It is important to monitor
+                  cholesterol levels and take appropriate measures to manage
+                  them.
+                </p>
+              </div>
+            </div>
+          </div>
+          <p class="text-center text-gray-400 textbase mt-9">
+            Still have questions?
+            <span
+              class="font-medium text-tertiary transition-all duration-200 hover:text-tertiary focus:text-tertiary hover-underline"
+              >Reach out to our team
+            </span>
+          </p>
+          <a
+            href="findus.html"
+            class="inline-block bg-amber-700 rounded-full py-2 px-5 outline-1 outline-transparent outline-offset-2 hover:outline-amber-700 hover:outline-2 transition-all duration-300 mt-3"
+            >Contact us</a
+          >
+        </div>
+        <script>
+          // JavaScript to toggle the answers and rotate the arrows
+          document
+            .querySelectorAll('[id^="question"]')
+            .forEach(function (button, index) {
+              button.addEventListener("click", function () {
+                var answer = document.getElementById("answer" + (index + 1));
+                var arrow = document.getElementById("arrow" + (index + 1));
+
+                if (
+                  answer.style.display === "none" ||
+                  answer.style.display === ""
+                ) {
+                  answer.style.display = "block";
+                  arrow.style.transform = "rotate(0deg)";
+                } else {
+                  answer.style.display = "none";
+                  arrow.style.transform = "rotate(-180deg)";
+                }
+              });
+            });
+        </script>
+      </section>
+    </section>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+  <footer class="bg-darkerblue text-white relative inset-x-0 bottom-0">
+    <section
+      class="grid grid-cols-1 md:grid-cols-6 space-y-5 text-center md:text-left mx-auto px-5 py-12 max-w-3xl"
+    >
+      <div class="col-span-1 md:col-span-2 hidden md:flex">
+        <ul class="space-y-2 pt-12">
+          <li><a href="aboutus.html" class="hover:underline">About Us</a></li>
+          <li><a href="research.html" class="hover:underline">Research</a></li>
+          <li><a href="faq.html" class="hover:underline">FAQ</a></li>
+          <li>
+            <a href="forpractitioners.html" class="hover:underline"
+              >Practitioners Info</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="col-span-1 md:col-span-2">
+        <h3 class="text-lg font-bold mb-4">Contact</h3>
+        <ul class="space-y-2">
+          <li>
+            <p class="text-gray-400">Phone:</p>
+            <a
+              href="tel:+61466886904"
+              class="hover:underline"
+              onclick="myFunction()"
+              >+61 466 886 904</a
+            >
+          </li>
+
+          <li>
+            <p class="text-gray-400">Email:</p>
+            <a
+              class="hover:underline"
+              onclick="showAlert('info@cholesterolcare.com.au', 'email')"
+            >
+              info@cholesterolcare.com.au
+            </a>
+          </li>
+
+          <li>
+            <p class="text-gray-400">Phone:</p>
+            <a
+              class="hover:underline"
+              onclick="showAlert('0737404777', 'phone')"
+            >
+              (07) 3740 4777
+            </a>
+          </li>
+
+          <!-- Reusable Alert container -->
+          <div
+            id="global-alert"
+            class="fixed top-0 left-0 w-full z-60 transform -translate-y-full transition-transform duration-300 p-4 text-sm text-fg-brand-strong rounded-b-base bg-amber-700 shadow-lg"
+            role="alert"
+          >
+            <div class="flex items-center justify-between max-w-3xl mx-auto">
+              <div class="flex items-center">
+                <svg
+                  class="w-4 h-4 shrink-0 me-2"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M10 11h2v5m-2 0h4m-2.592-8.5h.01M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                  />
+                </svg>
+                <span class="sr-only">Info</span>
+                <h3 class="font-extralight" id="alert-message"></h3>
+              </div>
+              <button
+                type="button"
+                aria-label="Close"
+                onclick="hideAlert()"
+                class="ms-auto -mx-1.5 -my-1.5 rounded cursor-pointer brand-medium hover:bg-brand-soft inline-flex items-center justify-center h-8 w-8 shrink-0"
+              >
+                <span class="sr-only">Close</span>
+                <svg
+                  class="w-4 h-4"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M6 18 17.94 6M18 18 6.06 6"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <script>
+            let alertTimeout;
+
+            function showAlert(value, type) {
+              // Copy to clipboard
+              navigator.clipboard.writeText(value);
+
+              // Update alert message dynamically
+              const messageEl = document.getElementById("alert-message");
+              if (type === "email") {
+                messageEl.innerHTML = `The email address <b class="font-bold">${value}</b> has been copied to your clipboard!`;
+              } else if (type === "phone") {
+                messageEl.innerHTML = `The phone number <b class="font-bold">(07) 3740 4777</b> has been copied to your clipboard!`;
+              } else {
+                messageEl.innerHTML = `<b class="font-bold">Error</b>`;
+              }
+
+              // Show alert
+              const alertDiv = document.getElementById("global-alert");
+              alertDiv.classList.remove("-translate-y-full");
+              alertDiv.classList.add("translate-y-0");
+
+              // Clear previous timeout if exists
+              if (alertTimeout) clearTimeout(alertTimeout);
+
+              // Auto-hide after 3 seconds
+              alertTimeout = setTimeout(() => {
+                hideAlert();
+              }, 3000);
+            }
+
+            function hideAlert() {
+              const alertDiv = document.getElementById("global-alert");
+              alertDiv.classList.remove("translate-y-0");
+              alertDiv.classList.add("-translate-y-full");
+            }
+          </script>
+          <!-- <li>
+            <p class="text-gray-400">Fax:</p>
+            <a href="#" class="hover:underline" onclick="myFunctionFax()"
+              >(07) 3740 4777</a
+            >
+            <script>
+              function myFunctionFax() {
+                navigator.clipboard.writeText("0737404777");
+                alert("Copied the phone number: " + "(07) 3740 4777");
+              }
+            </script>
+          </li>
+          <li>
+            <p class="text-gray-400">Email:</p>
+            <a href="#" class="hover:underline" onclick="myFunctionEmail()">info@cholesterolcare.com.au</a>
+            <script>
+              function myFunctionEmail() {
+                navigator.clipboard.writeText("info@cholesterolcare.com.au");
+                alert("Copied the email address: " + "info@cholesterolcare.com.au");
+              }
+            </script>
+          </li> -->
+
+          <!-- <li>
+            <p class="text-gray-400">Email:</p>
+            <a
+              href="mailto:info@cholesterolcare.com.au?subject=Hello&body=I would like to know more about your services."
+              class="hover:underline"
+              >info@cholesterolcare.com.au</a
+            >
+          </li> -->
+        </ul>
+      </div>
+      <div class="col-span-1 md:col-span-2">
+        <h3 class="text-lg font-bold mb-4">Location</h3>
+        <ul class="space-y-2">
+          <li>
+            <p class="text-gray-400">Address:</p>
+            <a
+              href="https://maps.app.goo.gl/W57J6abFzE3QadEE6"
+              class="hover:underline"
+              >Suite 19, Level 2, Taylor Medical Center, 40 Annerley Road,
+              Woolloongabba<svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-4 mb-1 ml-1 inline-block"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
+                />
+              </svg> </a
+            ><br />
+            <a
+              href="findus.html#information"
+              class="mt-3 inline-block bg-amber-700 rounded-full py-2 px-5 outline-1 outline-transparent outline-offset-2 hover:outline-amber-700 hover:outline-2 transition-all duration-300"
+              >Getting here</a
+            >
+          </li>
+        </ul>
+      </div>
+    </section>
+  </footer>
+</html>

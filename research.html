@@ -1,0 +1,711 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/yourcode.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>karam_project</title>
+  </head>
+  <body class="bg-slate-950 text-white">
+    <nav
+      class="flex items-center justify-between px-6 md:px-16 lg:px-24 xl:px-32 py-4 border-b border-gray-300 bg-white relative transition-all z-50 delay-100"
+    >
+      <a href="index.html">
+        <img
+          class="h-9"
+          src="http://cholesterolcare.com.au/wp-content/uploads/2020/03/web-logo.png"
+          alt="dummyLogoColored"
+        />
+      </a>
+
+      <button
+        aria-label="Menu"
+        id="menu-toggle"
+        class="sm:hidden cursor-pointer p-3"
+      >
+        <svg
+          width="21"
+          height="15"
+          viewBox="0 0 21 15"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect width="21" height="1.5" rx=".75" fill="#426287" />
+          <rect x="8" y="6" width="13" height="1.5" rx=".75" fill="#426287" />
+          <rect x="6" y="13" width="15" height="1.5" rx=".75" fill="#426287" />
+        </svg>
+      </button>
+
+      <div
+        id="mobile-menu"
+        class="hidden absolute top-15 left-0 w-full bg-white shadow-md py-4 flex-col items-start px-5 text-sm sm:hidden text-amber-700"
+      >
+        <a
+          href="findus.html"
+          class="block w-full px-3 my-1 py-1 rounded-full outline-transparent hover:outline-amber-700 hover:outline-2 transition-all duration-300"
+          >Find us</a
+        >
+        <a
+          href="aboutus.html"
+          class="block w-full px-3 my-1 py-1 rounded-full outline-transparent hover:outline-amber-700 hover:outline-2 transition-all duration-300"
+          >About us</a
+        >
+        <a
+          href="research.html"
+          class="block w-full px-3 my-1 py-1 rounded-full outline-transparent hover:outline-amber-700 hover:outline-2 transition-all duration-300"
+          >Research</a
+        >
+        <a
+          href="faq.html"
+          class="block w-full px-3 my-1 py-1 rounded-full outline-transparent hover:outline-amber-700 hover:outline-2 transition-all duration-300"
+          >FAQ</a
+        >
+        <a
+          href="forpractitioners.html"
+          class="mt-2 ml-2 inline-block text-white font-medium py-2 px-4 bg-linear-to-tr from-amber-700 to-yellow-600 rounded-full outline-1 outline-transparent outline-offset-2 hover:outline-amber-700 hover:outline-4 hover:opacity-80 transition-all duration-300"
+          >For Practitioners</a
+        >
+      </div>
+
+      <div class="hidden sm:flex items-center gap-x-3 text-amber-700">
+        <a
+          href="findus.html"
+          class="py-2 px-4 hover:underline hover:underline-offset-3"
+        >
+          Find us
+        </a>
+        <a
+          href="aboutus.html"
+          class="py-2 px-4 hover:underline hover:underline-offset-3"
+          >About us</a
+        >
+        <a
+          href="research.html"
+          class="py-2 px-4 hover:underline hover:underline-offset-3"
+          >Research</a
+        >
+        <a
+          href="faq.html"
+          class="py-2 px-4 hover:underline hover:underline-offset-3"
+          >FAQ</a
+        >
+
+        <!-- <div
+        class="hidden lg:flex items-center text-sm gap-2 border border-gray-300 px-3 rounded-full"
+      >
+        <input
+          class="py-1.5 w-full bg-transparent outline-none placeholder-gray-500"
+          type="text"
+          placeholder="Search products"
+        />
+        <svg
+          width="16"
+          height="16"
+          viewBox="0 0 16 16"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M10.836 10.615 15 14.695"
+            stroke="#7A7B7D"
+            stroke-width="1.2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            clip-rule="evenodd"
+            d="M9.141 11.738c2.729-1.136 4.001-4.224 2.841-6.898S7.67.921 4.942 2.057C2.211 3.193.94 6.281 2.1 8.955s4.312 3.92 7.041 2.783"
+            stroke="#7A7B7D"
+            stroke-width="1.2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </div> -->
+        <a
+          href="forpractitioners.html"
+          class="inline-block text-white font-medium py-2 px-4 bg-linear-to-tr from-amber-700 to-yellow-600 rounded-full outline-1 outline-transparent outline-offset-2 hover:outline-amber-700 hover:outline-4 hover:opacity-80 transition-all duration-300"
+          >For Practitioners</a
+        >
+      </div>
+    </nav>
+
+    <script>
+      document
+        .getElementById("menu-toggle")
+        .addEventListener("click", function () {
+          const menu = document.getElementById("mobile-menu");
+          if (menu.classList.contains("hidden")) {
+            menu.classList.remove("hidden");
+            menu.classList.add("flex");
+          } else {
+            menu.classList.add("hidden");
+          }
+        });
+    </script>
+
+    <section class="space-y-5 text-center max-w-3xl mx-auto px-5 pb-12 z-0">
+      <div class="content">
+        <h1 class="title pt-8">
+          Breakthrough
+          <div class="aurora">
+            <div class="aurora__item"></div>
+            <div class="aurora__item"></div>
+            <div class="aurora__item"></div>
+            <div class="aurora__item"></div>
+          </div>
+        </h1>
+        <p class="text-sm sm:text-base sm:pb-8 italic">
+          Research turns cholesterol from a silent risk into a manageable
+          number.
+        </p>
+      </div>
+
+      <div
+        class="mx-auto max-w-3xl divide-y divide-gray-600"
+        id="trials-accordion"
+      ></div>
+
+      <div class="mx-auto max-w-3xl" id="trials-accordion"></div>
+
+      <script>
+        // 1️⃣ Define your trial data with customizable details content
+        const trials = [
+          {
+            date: "| 2020 – Present",
+            title: "Amgen AMG890 20180109 – Lp(a)",
+            desc: "International multi-centre trial sponsored by Amgen.",
+            details:
+              "AMG 890 (delivered via a small injection into the top layer of skin by a Registered Nurse) is being developed for the treatment of patients with cardiovascular disease and elevated Lipoprotein Lp(a) levels, with the aim of reducing the risk of cardiovascular events. Lp(a) reductions of greater than 80% from baseline are anticipated with AMG 890 and it is expected that this level of reduction in Lp(a) may result in meaningful health benefits in patients with cardiovascular disease. The study duration is 1.5 years, with 3 monthly health checks by the Specialist and Registered Nurses. All participation, specialist consults and medication is free and travel expenses are reimbursed.",
+          },
+          {
+            date: "| 2019 – Present",
+            title: "Amgen AMG 20170625 – Versalius",
+            desc: "International multi-centre trial sponsored by Amgen.",
+            details:
+              "One of the study objectives is to evaluate the effect of treatment with Evolocumab (Repatha), compared with placebo, in patients with high cardiovascular risk. Eligible patients will be without a prior heart attack or stroke but have elevated cholesterol levels whilst receiving optimized cholesterol lowering therapy.The study duration is 3 years, with 4 monthly health checks by the specialist and Registered Nurses. All participation, specialist consults and medication is free and travel expenses are reimbursed.",
+          },
+          {
+            date: "| 2019 – Present",
+            title: "CTQJ230A12001 – Lp(a) Non-Interventional Study",
+            desc: "Sponsored by Novartis.",
+            details:
+              "People who are overweight or who have obesity are at high risk for cardiovascular disease. Semaglutide has shown cardiovascular risk reduction and impact on cardiovascular risk factors including weight, high blood glucose and increased blood pressure in subjects with type 2 diabetes. Whether semaglutide will reduce cardiovascular disease risk and mortality in patients with established cardiovascular disease and who are overweight/obese is not known. The study’s primary objective is to demonstrate whether semaglutide injections lower the incidence of major adverse cardiovascular events versus semaglutide placebo, both added to standard care in patients with established cardiovascular disease and overweight/obesity. The study duration is 3 years, with 1-3 monthly health checks by the specialist and Registered Nurses. All participation, specialist consults and medication is free and travel expenses are reimbursed.",
+          },
+          {
+            date: "| 2018 – Present",
+            title: "EX9536-4388 – Semaglutide Obesity Study",
+            desc: "International multi-centre trial sponsored by Novo Nordisk.",
+            details: "unavailable",
+          },
+          {
+            date: "| 2018 – 2020",
+            title: "BI Heart Failure Trial 1245-121",
+            desc: "International multi-centre trial sponsored by Boehringer Ingelheim.",
+            details: "unavailable",
+          },
+          {
+            date: "| 2017 – Present",
+            title: "Esperion Therapeutics 1002-043 – Bempedoic Acid",
+            desc: "International multi-centre trial sponsored by Esperion Therapeutics.",
+            details: "unavailable",
+          },
+          {
+            date: "| 2017 – Nov 2018",
+            title: "SAHMRI Impact Study",
+            desc: "Multi-centre trial sponsored by Heart Health / Investigator.",
+            details: "unavailable",
+          },
+          {
+            date: "| 2017 – Dec 2017",
+            title: "Amgen 20110203 – OM AMG 423",
+            desc: "International multi-centre trial sponsored by Amgen Pty Ltd.",
+            details: "unavailable",
+          },
+          {
+            date: "| 2017 – May 2018",
+            title: "CKD-519 (148HL16011)",
+            desc: "International multi-centre trial sponsored by Chong Kun Dang Pharmaceutical Corporation.",
+            details: "unavailable",
+          },
+          {
+            date: "| 2015 – Present",
+            title: "Strength D5881C00004",
+            desc: "International multi-centre trial sponsored by AstraZeneca.",
+            details: "unavailable",
+          },
+          {
+            date: "| 2014 – June 2018",
+            title: "Amgen 20120138 – OSLER 2",
+            desc: "International multi-centre trial sponsored by Amgen Pty Ltd.",
+            details: "unavailable",
+          },
+          {
+            date: "| 2013 – Jan 2018",
+            title: "Amgen 20120332 – GAUSS 3",
+            desc: "International multi-centre trial sponsored by Amgen Pty Ltd.",
+            details: "unavailable",
+          },
+          {
+            date: "| 2013 – Dec 2017",
+            title: "EFC13786 – Odyssey Choice II",
+            desc: "International multi-centre trial sponsored by Sanofi Pharmaceuticals Inc.",
+            details: "unavailable",
+          },
+          {
+            date: "| 2013 – 2014",
+            title: "Regeneron CL 1118",
+            desc: "International multi-centre trial sponsored by Regeneron Pharmaceuticals Inc.",
+            details: "unavailable",
+          },
+          {
+            date: "| 2013 – 2014",
+            title: "Regeneron CL 1110",
+            desc: "International multi-centre trial sponsored by Regeneron Pharmaceuticals Inc.",
+            details: "unavailable",
+          },
+          {
+            date: "| 2012 – 2014",
+            title: "BC28027 – Aleglitazar",
+            desc: "An international multi-centre trial sponsored by Roche Pty Ltd.",
+            details: "unavailable",
+          },
+          {
+            date: "| 2012 – 2017",
+            title: "AMG 145 20110118 – Fourier Study",
+            desc: "An international multi-centre trial sponsored by Amgen Pty Ltd.",
+            details: "unavailable",
+          },
+          {
+            date: "| 2012 – 2014",
+            title: "AMR-01-01-0019 – Reduce-IT",
+            desc: "An international multi-centre trial sponsored by Amarin Pharma Inc.",
+            details: "unavailable",
+          },
+          {
+            date: "| 2012 – 2015",
+            title: "MIPO3801011 – Mipomersen",
+            desc: "An international multi-centre trial sponsored by Genzyme Pty Ltd.",
+            details: "unavailable",
+          },
+          {
+            date: "| 2011 – 2013",
+            title: "Nicotinic Acid Effects on Lipoprotein(a)",
+            desc: "Co-investigator for an investigator-initiated trial.",
+            details: "unavailable",
+          },
+          {
+            date: "| 2011 – 2012",
+            title: "MK0524A/118",
+            desc: "An international multi-centre trial sponsored by Merck Pty Ltd.",
+            details: "unavailable",
+          },
+          {
+            date: "| 2011 – 2013",
+            title: "MK0524A/133",
+            desc: "An international multi-centre trial sponsored by Merck Pty Ltd.",
+            details: "unavailable",
+          },
+          {
+            date: "| 2010 – 2012",
+            title: "DRONE-C-03668 – Artemis",
+            desc: "An international multi-centre trial sponsored by Sanofi Aventis.",
+            details: "unavailable",
+          },
+          {
+            date: "| 2010 – 2017",
+            title: "28431754DIA3008 – Canvas",
+            desc: "An international multi-centre trial sponsored by Johnson & Johnson Pty Ltd.",
+            details: "unavailable",
+          },
+          {
+            date: "| 2010 – 2017",
+            title: "CSPP100F2301 – Atmosphere",
+            desc: "An international multi-centre trial sponsored by Novartis Pty Ltd.",
+            details: "unavailable",
+          },
+          {
+            date: "| 2010 – 2011",
+            title: "Enoxaparin Therapy in Post-Cardiac MI Patients",
+            desc: "Co-investigator for an investigator-initiated trial with Dr Michael Barras – Head of Pharmacy Mater Adult Hospital.",
+            details: "unavailable",
+          },
+          {
+            date: "| 2010 – 2014",
+            title: "MK0859/019/011",
+            desc: "An international multi-centre trial sponsored by Merck Pty Ltd.",
+            details: "unavailable",
+          },
+          {
+            date: "| 2009 – 2011",
+            title: "MB117-004",
+            desc: "An international multi-centre trial sponsored by Bristol Myers Squibb Pty Ltd.",
+            details: "unavailable",
+          },
+          {
+            date: "| 2009",
+            title: "MK0524A/102",
+            desc: "An international multi-centre trial sponsored by Merck Pty Ltd.",
+            details: "unavailable",
+          },
+          {
+            date: "| 2009",
+            title: "EFC10841",
+            desc: "An international multi-centre trial sponsored by Sanofi Aventis Pty Ltd.",
+            details: "unavailable",
+          },
+          {
+            date: "| 2008 – 2009",
+            title: "EFC6910",
+            desc: "An international multi-centre trial sponsored by Sanofi Aventis Pty Ltd.",
+            details: "unavailable",
+          },
+          {
+            date: "| 2008 – 2009",
+            title: "WHICH Heart Failure Study",
+            desc: "A multi-site study sponsored by Baker Heart Research Institute Melbourne.",
+            details: "unavailable",
+          },
+          {
+            date: "| 2008 – Disbanded",
+            title: "MK0524A/082",
+            desc: "An international multi-centre trial sponsored by Merck Pty Ltd.",
+            details: "unavailable",
+          },
+          {
+            date: "| 2008 – 2010",
+            title: "MK0859/019",
+            desc: "An international multi-centre trial sponsored by Merck Pty Ltd.",
+            details: "unavailable",
+          },
+          {
+            date: "| 2007 – Disbanded",
+            title: "MK0524B/024",
+            desc: "An international multi-centre trial sponsored by Merck Pty Ltd.",
+            details: "unavailable",
+          },
+          {
+            date: "| 2007 – Disbanded",
+            title: "MK0524A/041",
+            desc: "An international multi-centre trial sponsored by Merck Pty Ltd.",
+            details: "unavailable",
+          },
+          {
+            date: "| 2007 – 2009",
+            title: "MK6213/006",
+            desc: "An international multi-centre trial sponsored by Merck Pty Ltd.",
+            details: "unavailable",
+          },
+          {
+            date: "| 2007 – 2008",
+            title: "MK0524A/067",
+            desc: "An international multi-centre trial sponsored by Merck Pty Ltd.",
+            details: "unavailable",
+          },
+          {
+            date: "| 2007 – 2008",
+            title: "PACE Study, AI-700",
+            desc: "Contrast follow-up study sponsored by Acusphere Inc.",
+            details: "unavailable",
+          },
+          {
+            date: "| 2007 – Disbanded",
+            title: "A5091075",
+            desc: "An international multi-centre trial sponsored by Pfizer International Pty Ltd.",
+            details: "unavailable",
+          },
+          {
+            date: "| 2006 – 2007",
+            title: "MK0524A/020",
+            desc: "An international multi-centre trial sponsored by Merck Pty Ltd.",
+            details: "unavailable",
+          },
+          {
+            date: "| 2005 – 2006",
+            title: "Familial Hypercholesterolemia A5091026",
+            desc: "An international multi-centre trial sponsored by Pfizer International Pty Ltd.",
+            details: "unavailable",
+          },
+          {
+            date: "| 2005 – 2007",
+            title: "A5091043 Illuminate",
+            desc: "An international multi-centre trial sponsored by Pfizer International Pty Ltd.",
+            details: "unavailable",
+          },
+          {
+            date: "| 2005 – 2006",
+            title: "AI-700-32 Contrast Trial",
+            desc: "An international multi-centre trial sponsored by Acusphere Inc.",
+            details: "unavailable",
+          },
+          {
+            date: "| 2005 – 2006",
+            title: "Gemini AALA A3841024",
+            desc: "An international multi-centre trial sponsored by Pfizer International Pty Ltd.",
+            details: "unavailable",
+          },
+        ];
+
+        // 2️⃣ Generate the accordion dynamically
+        const accordionContainer = document.getElementById("trials-accordion");
+
+        trials.forEach((trial) => {
+          const details = document.createElement("details");
+          details.className = "group";
+
+          details.innerHTML = `
+      <summary class="flex cursor-pointer items-center justify-between py-4 text-lg font-medium text-secondary-900 group-open:text-primary-500 list-none">
+        <div class="text-left">
+          <p class="trial-date">${trial.date}</p>
+          <p class="trial-title">${trial.title}</p>
+          <p class="trial-desc">${trial.desc}</p>
+        </div>
+        <div class="flex-shrink-0">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+               stroke-width="1.5" stroke="currentColor" class="block h-5 w-5 group-open:hidden">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/>
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+               stroke-width="1.5" stroke="currentColor" class="hidden h-5 w-5 group-open:block">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12h-15"/>
+          </svg>
+        </div>
+      </summary>
+      <div class="pb-4 text-secondary-500 trial-details">
+        ${trial.details}
+      </div>
+    `;
+
+          accordionContainer.appendChild(details);
+        });
+      </script>
+
+      <a
+        href="#"
+        onclick="topFunction()"
+        class="inline-block bg-amber-700 rounded-full py-2 px-5 outline-1 outline-transparent outline-offset-2 hover:outline-amber-700 hover:outline-2 transition-all duration-300"
+        >Go back to the top</a
+      >
+      <script>
+        function topFunction() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+        }
+      </script>
+    </section>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+  <footer class="bg-darkerblue text-white relative inset-x-0 bottom-0">
+    <section
+      class="grid grid-cols-1 md:grid-cols-6 space-y-5 text-center md:text-left mx-auto px-5 py-12 max-w-3xl"
+    >
+      <div class="col-span-1 md:col-span-2 hidden md:flex">
+        <ul class="space-y-2 pt-12">
+          <li><a href="aboutus.html" class="hover:underline">About Us</a></li>
+          <li><a href="research.html" class="hover:underline">Research</a></li>
+          <li><a href="faq.html" class="hover:underline">FAQ</a></li>
+          <li>
+            <a href="forpractitioners.html" class="hover:underline"
+              >Practitioners Info</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="col-span-1 md:col-span-2">
+        <h3 class="text-lg font-bold mb-4">Contact</h3>
+        <ul class="space-y-2">
+          <li>
+            <p class="text-gray-400">Phone:</p>
+            <a
+              href="tel:+61466886904"
+              class="hover:underline"
+              onclick="myFunction()"
+              >+61 466 886 904</a
+            >
+          </li>
+
+          <li>
+            <p class="text-gray-400">Email:</p>
+            <a
+              class="hover:underline"
+              onclick="showAlert('info@cholesterolcare.com.au', 'email')"
+            >
+              info@cholesterolcare.com.au
+            </a>
+          </li>
+
+          <li>
+            <p class="text-gray-400">Phone:</p>
+            <a
+              class="hover:underline"
+              onclick="showAlert('0737404777', 'phone')"
+            >
+              (07) 3740 4777
+            </a>
+          </li>
+
+          <!-- Reusable Alert container -->
+          <div
+            id="global-alert"
+            class="fixed top-0 left-0 w-full z-60 transform -translate-y-full transition-transform duration-300 p-4 text-sm text-fg-brand-strong rounded-b-base bg-amber-700 shadow-lg"
+            role="alert"
+          >
+            <div class="flex items-center justify-between max-w-3xl mx-auto">
+              <div class="flex items-center">
+                <svg
+                  class="w-4 h-4 shrink-0 me-2"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M10 11h2v5m-2 0h4m-2.592-8.5h.01M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                  />
+                </svg>
+                <span class="sr-only">Info</span>
+                <h3 class="font-extralight" id="alert-message"></h3>
+              </div>
+              <button
+                type="button"
+                aria-label="Close"
+                onclick="hideAlert()"
+                class="ms-auto -mx-1.5 -my-1.5 rounded cursor-pointer brand-medium hover:bg-brand-soft inline-flex items-center justify-center h-8 w-8 shrink-0"
+              >
+                <span class="sr-only">Close</span>
+                <svg
+                  class="w-4 h-4"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M6 18 17.94 6M18 18 6.06 6"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <script>
+            let alertTimeout;
+
+            function showAlert(value, type) {
+              // Copy to clipboard
+              navigator.clipboard.writeText(value);
+
+              // Update alert message dynamically
+              const messageEl = document.getElementById("alert-message");
+              if (type === "email") {
+                messageEl.innerHTML = `The email address <b class="font-bold">${value}</b> has been copied to your clipboard!`;
+              } else if (type === "phone") {
+                messageEl.innerHTML = `The phone number <b class="font-bold">(07) 3740 4777</b> has been copied to your clipboard!`;
+              } else {
+                messageEl.innerHTML = `<b class="font-bold">Error</b>`;
+              }
+
+              // Show alert
+              const alertDiv = document.getElementById("global-alert");
+              alertDiv.classList.remove("-translate-y-full");
+              alertDiv.classList.add("translate-y-0");
+
+              // Clear previous timeout if exists
+              if (alertTimeout) clearTimeout(alertTimeout);
+
+              // Auto-hide after 3 seconds
+              alertTimeout = setTimeout(() => {
+                hideAlert();
+              }, 3000);
+            }
+
+            function hideAlert() {
+              const alertDiv = document.getElementById("global-alert");
+              alertDiv.classList.remove("translate-y-0");
+              alertDiv.classList.add("-translate-y-full");
+            }
+          </script>
+          <!-- <li>
+            <p class="text-gray-400">Fax:</p>
+            <a href="#" class="hover:underline" onclick="myFunctionFax()"
+              >(07) 3740 4777</a
+            >
+            <script>
+              function myFunctionFax() {
+                navigator.clipboard.writeText("0737404777");
+                alert("Copied the phone number: " + "(07) 3740 4777");
+              }
+            </script>
+          </li>
+          <li>
+            <p class="text-gray-400">Email:</p>
+            <a href="#" class="hover:underline" onclick="myFunctionEmail()">info@cholesterolcare.com.au</a>
+            <script>
+              function myFunctionEmail() {
+                navigator.clipboard.writeText("info@cholesterolcare.com.au");
+                alert("Copied the email address: " + "info@cholesterolcare.com.au");
+              }
+            </script>
+          </li> -->
+
+          <!-- <li>
+            <p class="text-gray-400">Email:</p>
+            <a
+              href="mailto:info@cholesterolcare.com.au?subject=Hello&body=I would like to know more about your services."
+              class="hover:underline"
+              >info@cholesterolcare.com.au</a
+            >
+          </li> -->
+        </ul>
+      </div>
+      <div class="col-span-1 md:col-span-2">
+        <h3 class="text-lg font-bold mb-4">Location</h3>
+        <ul class="space-y-2">
+          <li>
+            <p class="text-gray-400">Address:</p>
+            <a
+              href="https://maps.app.goo.gl/W57J6abFzE3QadEE6"
+              class="hover:underline"
+              >Suite 19, Level 2, Taylor Medical Center, 40 Annerley Road,
+              Woolloongabba<svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-4 mb-1 ml-1 inline-block"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
+                />
+              </svg> </a
+            >3<br />
+            <a
+              href="findus.html#information"
+              class="mt-3 inline-block bg-amber-700 rounded-full py-2 px-5 outline-1 outline-transparent outline-offset-2 hover:outline-amber-700 hover:outline-2 transition-all duration-300"
+              >Getting here</a
+            >
+          </li>
+        </ul>
+      </div>
+    </section>
+  </footer>
+</html>
