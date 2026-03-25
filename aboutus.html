@@ -371,11 +371,8 @@
           </li>
 
           <li>
-            <p class="text-gray-400">Phone:</p>
-            <a
-              class="hover:underline"
-              onclick="showAlert('0737404777', 'phone')"
-            >
+            <p class="text-gray-400">Fax:</p>
+            <a class="hover:underline" onclick="showAlert('0737404777', 'fax')">
               (07) 3740 4777
             </a>
           </li>
@@ -447,8 +444,8 @@
               const messageEl = document.getElementById("alert-message");
               if (type === "email") {
                 messageEl.innerHTML = `The email address <b class="font-bold">${value}</b> has been copied to your clipboard!`;
-              } else if (type === "phone") {
-                messageEl.innerHTML = `The phone number <b class="font-bold">(07) 3740 4777</b> has been copied to your clipboard!`;
+              } else if (type === "fax") {
+                messageEl.innerHTML = `The fax number <b class="font-bold">(07) 3740 4777</b> has been copied to your clipboard!`;
               } else {
                 messageEl.innerHTML = `<b class="font-bold">Error</b>`;
               }
@@ -532,7 +529,7 @@
             ><br />
             <a
               href="findus.html#information"
-              class="mt-3 inline-block bg-amber-700 rounded-full py-2 px-5 outline-1 outline-transparent outline-offset-2 hover:outline-amber-700 hover:outline-2 transition-all duration-300"
+              class="my-4 mb-8 inline-block bg-amber-700 rounded-full py-2 px-5 outline-1 outline-transparent outline-offset-2 hover:outline-amber-700 hover:outline-2 transition-all duration-300"
               >Getting here</a
             >
           </li>

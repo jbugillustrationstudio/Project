@@ -198,16 +198,16 @@
               "One of the study objectives is to evaluate the effect of treatment with Evolocumab (Repatha), compared with placebo, in patients with high cardiovascular risk. Eligible patients will be without a prior heart attack or stroke but have elevated cholesterol levels whilst receiving optimized cholesterol lowering therapy.The study duration is 3 years, with 4 monthly health checks by the specialist and Registered Nurses. All participation, specialist consults and medication is free and travel expenses are reimbursed.",
           },
           {
-            date: "| 2019 – Present",
-            title: "CTQJ230A12001 – Lp(a) Non-Interventional Study",
-            desc: "Sponsored by Novartis.",
+            date: "| 2018 – Present",
+            title: "EX9536-4388 – Semaglutide Obesity Study",
+            desc: "International multi-centre trial sponsored by Novo Nordisk.",
             details:
               "People who are overweight or who have obesity are at high risk for cardiovascular disease. Semaglutide has shown cardiovascular risk reduction and impact on cardiovascular risk factors including weight, high blood glucose and increased blood pressure in subjects with type 2 diabetes. Whether semaglutide will reduce cardiovascular disease risk and mortality in patients with established cardiovascular disease and who are overweight/obese is not known. The study’s primary objective is to demonstrate whether semaglutide injections lower the incidence of major adverse cardiovascular events versus semaglutide placebo, both added to standard care in patients with established cardiovascular disease and overweight/obesity. The study duration is 3 years, with 1-3 monthly health checks by the specialist and Registered Nurses. All participation, specialist consults and medication is free and travel expenses are reimbursed.",
           },
           {
-            date: "| 2018 – Present",
-            title: "EX9536-4388 – Semaglutide Obesity Study",
-            desc: "International multi-centre trial sponsored by Novo Nordisk.",
+            date: "| 2019 – Present",
+            title: "CTQJ230A12001 – Lp(a) Non-Interventional Study",
+            desc: "Sponsored by Novartis.",
             details: "unavailable",
           },
           {
@@ -458,7 +458,6 @@
           },
         ];
 
-        // 2️⃣ Generate the accordion dynamically
         const accordionContainer = document.getElementById("trials-accordion");
 
         trials.forEach((trial) => {
@@ -470,7 +469,7 @@
         <div class="text-left">
           <p class="text-sm opacity-60">${trial.date}</p>
           <p class="text-lg font-thin">${trial.title}</p>
-          <p class="text-sm opacity-70">${trial.desc}</p>
+          <p class="text-sm">${trial.desc}</p>
         </div>
         <div class="flex-shrink-0">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -547,11 +546,8 @@
           </li>
 
           <li>
-            <p class="text-gray-400">Phone:</p>
-            <a
-              class="hover:underline"
-              onclick="showAlert('0737404777', 'phone')"
-            >
+            <p class="text-gray-400">Fax:</p>
+            <a class="hover:underline" onclick="showAlert('0737404777', 'fax')">
               (07) 3740 4777
             </a>
           </li>
@@ -623,8 +619,8 @@
               const messageEl = document.getElementById("alert-message");
               if (type === "email") {
                 messageEl.innerHTML = `The email address <b class="font-bold">${value}</b> has been copied to your clipboard!`;
-              } else if (type === "phone") {
-                messageEl.innerHTML = `The phone number <b class="font-bold">(07) 3740 4777</b> has been copied to your clipboard!`;
+              } else if (type === "fax") {
+                messageEl.innerHTML = `The fax number <b class="font-bold">(07) 3740 4777</b> has been copied to your clipboard!`;
               } else {
                 messageEl.innerHTML = `<b class="font-bold">Error</b>`;
               }
@@ -705,10 +701,10 @@
                   d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
                 />
               </svg> </a
-            >3<br />
+            ><br />
             <a
               href="findus.html#information"
-              class="mt-3 inline-block bg-amber-700 rounded-full py-2 px-5 outline-1 outline-transparent outline-offset-2 hover:outline-amber-700 hover:outline-2 transition-all duration-300"
+              class="my-4 mb-8 inline-block bg-amber-700 rounded-full py-2 px-5 outline-1 outline-transparent outline-offset-2 hover:outline-amber-700 hover:outline-2 transition-all duration-300"
               >Getting here</a
             >
           </li>
