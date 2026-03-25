@@ -1,5 +1,7 @@
 @import "tailwindcss";
-
+@theme {
+  --breakpoint-sm: 54rem;
+}
 .trial-date {
   @apply text-sm opacity-60;
 }
