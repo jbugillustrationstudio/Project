@@ -3,21 +3,6 @@
 @theme {
   --breakpoint-sm: 54rem;
 }
-.trial-date {
-  @apply text-sm opacity-60;
-}
-
-.trial-title {
-  @apply text-lg font-thin;
-}
-
-.trial-desc {
-  @apply text-sm opacity-70;
-}
-
-.trial-details {
-  @apply text-sm text-left pl-5;
-}
 
 body {
   background-color: #051822;
@@ -106,7 +91,7 @@ body {
   background-size: 200% auto;
   color: #fff;
   background-clip: text;
-  text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: textclip 2s linear infinite;
@@ -148,9 +133,6 @@ body {
   position: relative;
   overflow: hidden;
   margin: 0;
-}
-
-.subtitle {
 }
 
 .aurora {

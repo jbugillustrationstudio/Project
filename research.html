@@ -462,9 +462,9 @@
           details.innerHTML = `
       <summary class="flex cursor-pointer items-center justify-between py-4 text-lg font-medium text-secondary-900 group-open:text-primary-500 list-none">
         <div class="text-left">
-          <p class="trial-date">${trial.date}</p>
-          <p class="trial-title">${trial.title}</p>
-          <p class="trial-desc">${trial.desc}</p>
+          <p class="text-sm opacity-60">${trial.date}</p>
+          <p class="text-lg font-thin">${trial.title}</p>
+          <p class="text-sm opacity-70">${trial.desc}</p>
         </div>
         <div class="flex-shrink-0">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -477,7 +477,7 @@
           </svg>
         </div>
       </summary>
-      <div class="pb-4 text-secondary-500 trial-details">
+      <div class="pb-4 text-secondary-500 text-sm text-left pl-5">
         ${trial.details}
       </div>
     `;
