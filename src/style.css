@@ -2,6 +2,7 @@
 
 @theme {
   --breakpoint-sm: 54rem;
+  --color-darkerblue: #0a2634;
 }
 
 body {
@@ -62,21 +63,7 @@ body {
     --highlight: oklch(98% 0.05 var(--hue));
   }
 }
-@theme {
-  --color-bluebase-50: #c7d9e2;
-  --color-bluebase-100: #afc8d6;
-  --color-bluebase-200: #7fa6b8;
-  --color-bluebase-300: #4e7c93;
-  --color-bluebase-400: #345a6e; /* base */
-  --color-bluebase-500: #2a4859;
-  --color-bluebase-600: #1f3743;
-  --color-bluebase-700: #16272f;
-  --color-bluebase-800: #0f1a21;
-  --color-bluebase-900: #080e12;
-  --color-goldbase: #c78a2c;
-  --color-darkerblue: #0a2634;
-  --color-darkbluebackground: #051822;
-}
+
 .animate-charcter {
   text-transform: uppercase;
   background-image: linear-gradient(
