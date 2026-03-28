@@ -13,10 +13,14 @@
     <style type="text/tailwindcss">
       @theme {
         --breakpoint-xs: 40rem;
-        --breakpoint-sm: 54rem;
         --breakpoint-sml: 58rem;
         --color-darkerblue: #0a2634;
       }
+      @custom-variant landscape-phone {
+  @media (orientation: landscape) and (max-height: 500px) {
+    @slot;
+  }
+}
     </style>
     <title>karam_project</title>
   </head>
