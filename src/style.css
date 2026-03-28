@@ -1,8 +1,14 @@
 @import "tailwindcss";
 
 @theme {
+  --breakpoint-xs: 40rem;
   --breakpoint-sm: 54rem;
   --color-darkerblue: #0a2634;
+}
+@custom-variant landscape-phone {
+  @media (orientation: landscape) and (max-height: 500px) {
+    @slot;
+  }
 }
 
 body {
