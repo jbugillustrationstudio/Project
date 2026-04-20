@@ -1,0 +1,1098 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/yourcode.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.2"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1"
+      type="module"
+    ></script>
+    <link rel="stylesheet" href="src/style.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1"
+      type="module"
+    ></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --breakpoint-sm: 54rem;
+        --color-darkerblue: #0a2634;
+      }
+    </style>
+    <title>karam_project</title>
+  </head>
+  <body
+    class="bg-slate-950 text-white selection:bg-amber-300 selection:text-emerald-900"
+  >
+    <nav
+      class="relative flex items-center justify-between px-6 sm:px-16 lg:px-24 xl:px-32 py-4 border-b border-gray-300 bg-white transition-all z-50 delay-100"
+    >
+      <a href="index.html">
+        <img
+          class="h-9"
+          src="http://cholesterolcare.com.au/wp-content/uploads/2020/03/web-logo.png"
+          alt="cholesterol care logo"
+        />
+      </a>
+
+      <button
+        aria-label="Menu"
+        id="menu-toggle"
+        class="sm:hidden flex cursor-pointer p-3"
+      >
+        <svg
+          width="21"
+          height="15"
+          viewBox="0 0 21 15"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect width="21" height="1.5" rx=".75" fill="#426287" />
+          <rect x="8" y="6" width="13" height="1.5" rx=".75" fill="#426287" />
+          <rect x="6" y="13" width="15" height="1.5" rx=".75" fill="#426287" />
+        </svg>
+      </button>
+
+      <div
+        id="mobile-menu"
+        class="hidden absolute top-15 left-0 w-full bg-white shadow-md py-4 flex-col items-start px-5 text-sm sm:hidden text-amber-700"
+      >
+        <a
+          href="findus.html"
+          class="block w-full px-3 my-1 py-1 rounded-full outline-transparent hover:outline-amber-700 hover:outline-2 transition-all duration-300"
+          >Find us</a
+        >
+        <a
+          href="aboutus.html"
+          class="block w-full px-3 my-1 py-1 rounded-full outline-transparent hover:outline-amber-700 hover:outline-2 transition-all duration-300"
+          >About us</a
+        >
+        <a
+          href="research.html"
+          class="block w-full px-3 my-1 py-1 rounded-full outline-transparent hover:outline-amber-700 hover:outline-2 transition-all duration-300"
+          >Research
+          <hr class="mt-4 border-t border-amber-800/20"
+        /></a>
+
+        <a
+          href="faq.html"
+          class="block w-full px-3 my-1 py-1 rounded-full outline-transparent hover:outline-amber-700 hover:outline-2 transition-all duration-300"
+          >FAQ</a
+        >
+        <a
+          href="fhcalculator.html"
+          class="block w-full px-3 my-1 py-1 rounded-full outline-transparent hover:outline-amber-700 hover:outline-2 transition-all duration-300"
+          >FH Calculator
+          <hr class="mt-4 border-t border-amber-800/20"
+        /></a>
+        <a
+          href="forpractitioners.html"
+          class="mt-2 ml-2 inline-block text-white font-medium py-2 px-4 bg-linear-to-tr from-amber-700 to-yellow-600 rounded-full outline-1 outline-transparent outline-offset-2 hover:outline-amber-700 hover:outline-4 hover:opacity-80 transition-all duration-300"
+          >For Practitioners</a
+        >
+      </div>
+
+      <div class="hidden sm:flex items-center gap-x-3 text-amber-700">
+        <a
+          href="findus.html"
+          class="py-2 px-4 hover:underline hover:underline-offset-3"
+        >
+          Find us
+        </a>
+        <a
+          href="aboutus.html"
+          class="py-2 px-4 hover:underline hover:underline-offset-3"
+          >About us</a
+        >
+        <a
+          href="research.html"
+          class="py-2 px-4 hover:underline hover:underline-offset-3"
+          >Research</a
+        >
+        <el-dropdown class="inline-block mr-2">
+          <button
+            class="cursor-pointer inline-flex w-full justify-center gap-x-1.5 rounded-full bg-white px-3 py-2 text-sm font-semibold text-amber-700 shadow-xs inset-ring-1 inset-ring-amber-700 hover:bg-gray-100"
+          >
+            More
+            <svg
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              data-slot="icon"
+              aria-hidden="true"
+              class="-mr-1 size-5 text-amber-700"
+            >
+              <path
+                d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
+                clip-rule="evenodd"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </button>
+
+          <el-menu
+            anchor="bottom end"
+            popover
+            class="w-56 origin-top-right rounded-md bg-white shadow-lg outline-1 outline-black/5 transition transition-discrete [--anchor-gap:--spacing(2)] data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in"
+          >
+            <div class="py-1">
+              <a
+                href="faq.html"
+                class="block px-4 py-2 text-sm text-amber-700 focus:bg-gray-100 focus:text-gray-900 focus:outline-hidden"
+                >FAQ</a
+              >
+              <a
+                href="fhcalculator.html"
+                class="block px-4 py-2 text-sm text-amber-700 focus:bg-gray-100 focus:text-gray-900 focus:outline-hidden"
+                >FH Calculator</a
+              >
+            </div>
+          </el-menu>
+        </el-dropdown>
+
+        <a
+          href="forpractitioners.html"
+          class="inline-block text-white font-medium py-2 px-4 bg-linear-to-tr from-amber-700 to-yellow-600 rounded-full outline-1 outline-transparent outline-offset-2 hover:outline-amber-700 hover:outline-4 hover:opacity-80 transition-all duration-300"
+          >For Practitioners</a
+        >
+      </div>
+    </nav>
+
+    <script>
+      document
+        .getElementById("menu-toggle")
+        .addEventListener("click", function () {
+          const menu = document.getElementById("mobile-menu");
+          if (menu.classList.contains("hidden")) {
+            menu.classList.remove("hidden");
+            menu.classList.add("flex");
+          } else {
+            menu.classList.add("hidden");
+          }
+        });
+    </script>
+
+    <!-- <div id="app"></div> -->
+    <section class="space-y-5 max-w-3xl mx-auto px-5 py-12">
+      <div class="flex items-center text-xl font-bold pb-3 text-left">
+        <img
+          src="src/maths.gif"
+          alt="Computer man"
+          style="width: 48px; height: 48px"
+        />
+        <h1 class="pl-3 align-middle">
+          Dutch Lipid Clinic Network Criteria scoring for diagnosis of familial
+          hypercholesterolaemia:
+        </h1>
+      </div>
+      <div class="text-left text-sm sm:text-base">
+        <form id="dlcnForm ">
+          <div class="question pb-3">
+            1. Did you have coronary artery disease (ie. heart attack) BEFORE
+            the age of 55 for men, or 60 for woman?<br />
+            <div class="flex justify-left items-center gap-5 pl-5 pt-2">
+              <label class="cursor-pointer"
+                ><input
+                  type="radio"
+                  name="q3"
+                  value="2"
+                  class="h-4 w-4 accent-yellow-500 focus:ring-yellow-500"
+                />
+                Yes</label
+              >
+              <label class="cursor-pointer"
+                ><input
+                  type="radio"
+                  name="q3"
+                  value="0"
+                  class="h-4 w-4 accent-yellow-500 focus:ring-yellow-500"
+                  checked
+                />
+                No</label
+              >
+            </div>
+          </div>
+          <div class="question pb-3">
+            2. Did you had a cerebral or peripheral vascular disease BEFORE the
+            age of 55 for men, or 60 for woman?<br />
+            <div class="flex justify-left items-center gap-5 pl-5 pt-2">
+              <label class="cursor-pointer"
+                ><input
+                  type="radio"
+                  name="q4"
+                  value="1"
+                  class="h-4 w-4 accent-yellow-500 focus:ring-yellow-500"
+                />
+                Yes</label
+              >
+              <label class="cursor-pointer"
+                ><input
+                  type="radio"
+                  name="q4"
+                  value="0"
+                  class="h-4 w-4 accent-yellow-500 focus:ring-yellow-500"
+                  checked
+                />
+                No</label
+              >
+            </div>
+          </div>
+          <div class="question pb-3">
+            3. Do you have a parent, brother or sister that had any premature
+            vascular dissease (heart attack, stroke or peripheral artery
+            disease) BEFORE the age of 55 for men, or 60 for woman?<br />
+            <div class="flex justify-left items-center gap-5 pl-5 pt-2">
+              <label class="cursor-pointer"
+                ><input
+                  type="radio"
+                  name="q1a"
+                  value="yes"
+                  class="h-4 w-4 accent-yellow-500 focus:ring-yellow-500"
+                />
+                Yes</label
+              >
+              <label class="cursor-pointer"
+                ><input
+                  type="radio"
+                  name="q1a"
+                  value="no"
+                  class="h-4 w-4 accent-yellow-500 focus:ring-yellow-500"
+                  checked
+                />
+                No</label
+              >
+            </div>
+          </div>
+          <div class="question pb-3">
+            4. Select your highest known LDL cholesterol level:<br />
+            <div class="pl-5 pt-2">
+              <label class="cursor-pointer"
+                ><input
+                  type="radio"
+                  name="ldl"
+                  value="8"
+                  class="h-4 w-4 accent-yellow-500 focus:ring-yellow-500"
+                />
+                ≥8.5 mmol/L</label
+              ><br />
+              <label class="cursor-pointer"
+                ><input
+                  type="radio"
+                  name="ldl"
+                  value="5"
+                  class="h-4 w-4 accent-yellow-500 focus:ring-yellow-500"
+                />
+                6.5–8.4 mmol/L</label
+              ><br />
+              <label class="cursor-pointer"
+                ><input
+                  type="radio"
+                  name="ldl"
+                  value="3"
+                  class="h-4 w-4 accent-yellow-500 focus:ring-yellow-500"
+                />
+                5.0–6.4 mmol/L</label
+              ><br />
+              <label class="cursor-pointer"
+                ><input
+                  type="radio"
+                  name="ldl"
+                  value="1"
+                  class="h-4 w-4 accent-yellow-500 focus:ring-yellow-500"
+                />
+                4.0–4.9 mmol/L</label
+              ><br />
+              <label class="cursor-pointer"
+                ><input
+                  type="radio"
+                  name="ldl"
+                  value="0"
+                  class="h-4 w-4 accent-yellow-500 focus:ring-yellow-500"
+                  checked
+                />
+                I don’t know / lower</label
+              >
+            </div>
+          </div>
+          <div class="question pb-3">
+            5. Do you have a parent, brother or sister that had been told they
+            have LDL level ("bad cholesterol") above 6 mmol/L or above the 95th
+            percentile?<br />
+            <div class="flex justify-left items-center gap-5 pl-5 pt-2">
+              <label class="cursor-pointer"
+                ><input
+                  type="radio"
+                  name="q1b"
+                  value="yes"
+                  class="h-4 w-4 accent-yellow-500 focus:ring-yellow-500"
+                />
+                Yes</label
+              >
+              <label class="cursor-pointer"
+                ><input
+                  type="radio"
+                  name="q1b"
+                  value="no"
+                  class="h-4 w-4 accent-yellow-500 focus:ring-yellow-500"
+                  checked
+                />
+                No</label
+              >
+            </div>
+          </div>
+          <div class="question pb-3">
+            6. If yes, did they have very high LDL ("bad cholesterol") before
+            the age of 18?<br />
+            <div class="flex justify-left items-center gap-5 pl-5 pt-2">
+              <label class="cursor-pointer"
+                ><input
+                  type="radio"
+                  name="q2b"
+                  value="yes"
+                  class="h-4 w-4 accent-yellow-500 focus:ring-yellow-500"
+                />
+                Yes</label
+              >
+              <label class="cursor-pointer"
+                ><input
+                  type="radio"
+                  name="q2b"
+                  value="no"
+                  class="h-4 w-4 accent-yellow-500 focus:ring-yellow-500"
+                  checked
+                />
+                No</label
+              >
+            </div>
+          </div>
+
+          <div class="question pb-3">
+            7. Have you been told you have a genetic mutation causing familial
+            hypercholesterolemia such as LDLR, APOB or PCSK9 genes or very high
+            LP(a) levels?<br />
+            <div class="flex justify-left items-center gap-5 pl-5 pt-2">
+              <label class="cursor-pointer"
+                ><input
+                  type="radio"
+                  name="q7"
+                  value="8"
+                  class="h-4 w-4 accent-yellow-500 focus:ring-yellow-500"
+                />
+                Yes</label
+              >
+              <label class="cursor-pointer"
+                ><input
+                  type="radio"
+                  name="q7"
+                  value="0"
+                  class="h-4 w-4 accent-yellow-500 focus:ring-yellow-500"
+                  checked
+                />
+                No</label
+              >
+            </div>
+          </div>
+
+          <div class="question pb-3">
+            8. Do you have any firm, fatty lumps around their tendons (Tendinous
+            xanthomata, i.e. Achilles tendon or hands)? †
+            <br />
+            <div class="flex justify-left items-center gap-5 pl-5 pt-2">
+              <label class="cursor-pointer"
+                ><input
+                  type="radio"
+                  name="q5"
+                  value="6"
+                  class="h-4 w-4 accent-yellow-500 focus:ring-yellow-500"
+                />
+                Yes</label
+              >
+              <label class="cursor-pointer"
+                ><input
+                  type="radio"
+                  name="q5"
+                  value="0"
+                  class="h-4 w-4 accent-yellow-500 focus:ring-yellow-500"
+                  checked
+                />
+                No</label
+              >
+            </div>
+          </div>
+          <div class="question pb-3">
+            9. Do you have a parent, brother or sister that have any firm, fatty
+            lumps around their tendons (Tendinous xanthomata, i.e. Achilles
+            tendon or hands)? †<br />
+            <div class="flex justify-left items-center gap-5 pl-5 pt-2">
+              <label class="cursor-pointer"
+                ><input
+                  type="radio"
+                  name="q2a"
+                  value="yes"
+                  class="h-4 w-4 accent-yellow-500 focus:ring-yellow-500"
+                />
+                Yes</label
+              >
+              <label class="cursor-pointer"
+                ><input
+                  type="radio"
+                  name="q2a"
+                  value="no"
+                  class="h-4 w-4 accent-yellow-500 focus:ring-yellow-500"
+                  checked
+                />
+                No</label
+              >
+            </div>
+          </div>
+          <div class="question pb-3">
+            10. Did you develop a grey or white ring around the coloured part of
+            their eyes (arcus cornealis) before the age of 45? †
+            <br />
+            <div class="flex justify-left items-center gap-5 pl-5 pt-2">
+              <label class="cursor-pointer"
+                ><input
+                  type="radio"
+                  name="q6"
+                  value="4"
+                  class="h-4 w-4 accent-yellow-500 focus:ring-yellow-500"
+                />
+                Yes</label
+              >
+              <label class="cursor-pointer"
+                ><input
+                  type="radio"
+                  name="q6"
+                  value="0"
+                  class="h-4 w-4 accent-yellow-500 focus:ring-yellow-500"
+                  checked
+                />
+                No</label
+              >
+            </div>
+          </div>
+          <div class="question pb-3">
+            11. Do you have a parent, brother or sister that had developed a
+            grey or white ring around the coloured part of their eyes (arcus
+            cornealis) before the age of 45? †<br />
+            <div class="flex justify-left items-center gap-5 pl-5 pt-2">
+              <label class="cursor-pointer"
+                ><input
+                  type="radio"
+                  name="q2c"
+                  value="yes"
+                  class="h-4 w-4 accent-yellow-500 focus:ring-yellow-500"
+                />
+                Yes</label
+              >
+              <label class="cursor-pointer"
+                ><input
+                  type="radio"
+                  name="q2c"
+                  value="no"
+                  class="h-4 w-4 accent-yellow-500 focus:ring-yellow-500"
+                  checked
+                />
+                No</label
+              >
+            </div>
+          </div>
+          <div class="text-xs mb-1">† Image</div>
+          <el-dropdown class="inline-block">
+            <button
+              class="cursor-pointer inline-flex justify-center gap-x-1.5 py-1 rounded-md text-white bg-transparent px-3 mb-2 text-sm font-semibold hover:text-gray-900 shadow-xs inset-ring-1 inset-ring-gray-300 hover:bg-gray-50"
+            >
+              Show
+              <svg
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                data-slot="icon"
+                aria-hidden="true"
+                class="-mr-1 size-5 text-gray-400"
+              >
+                <path
+                  d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
+                  clip-rule="evenodd"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </button>
+
+            <el-menu
+              anchor="bottom end"
+              popover
+              class="max-w-[95vw] w-fit overflow-x-hidden origin-top-right rounded-md bg-white shadow-lg outline-1 outline-black/5 transition [--anchor-gap:--spacing(2)] data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in"
+            >
+              <div class="py-1 max-w-full overflow-hidden">
+                <img
+                  src="https://www.athero.org.au/fh/wp-content/uploads/diagnosis.jpg"
+                  alt="Diagnosis image"
+                  class="max-w-full h-auto block"
+                /><a
+                  class="block px-4 pt-2 text-sm text-gray-700 focus:bg-gray-100 focus:text-gray-900 focus:outline-hidden"
+                  >Achilles tendon (A), the extensor tendons of the hands (B) </a
+                ><a
+                  class="block px-4 pb-2 text-sm text-gray-700 focus:bg-gray-100 focus:text-gray-900 focus:outline-hidden"
+                  >and/or on the eyelids (palpebral xanthelasma) (C) Arcus
+                  cornealis (D)</a
+                ><a
+                  href="https://www.athero.org.au/fh/health-professionals/how-to-diagnose-fh/#clinicalassessment"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="block px-4 pb-2 text-sm text-gray-700 focus:bg-gray-100 focus:text-gray-900 focus:outline-hidden"
+                  >https://www.athero.org.au/fh/health-professionals/how-to-diagnose-fh/#clinicalassessment</a
+                >
+              </div>
+            </el-menu></el-dropdown
+          >
+          <div>
+            <label
+              for="name"
+              class="block mb-1 text-sm font-medium text-heading"
+              >Name:</label
+            >
+            <input
+              type="text"
+              id="name"
+              class="sm:w-80 w-full rounded-xl mb-3 bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block px-3 py-2 shadow-xs placeholder:text-body"
+              placeholder="Name"
+              required
+            />
+          </div>
+
+          <br />
+
+          <button
+            type="button"
+            onclick="calculateScore()"
+            id="copyAnswers"
+            class="cursor-pointer rounded-3xl py-2 px-4 bg-amber-600 transition-all outline-1 outline-transparent outline-offset-2 hover:outline-amber-700 hover:outline-2 duration-300"
+          >
+            Calculate Result
+          </button>
+        </form>
+        <div class="result pl-2 py-2" id="result"></div>
+
+        <!-- <img
+          id="barcode"
+          style="display: none"
+          src="https://api.qrserver.com/v1/create-qr-code/?data=HelloWorld&amp;size=100x100"
+          alt=""
+          title="HELLO"
+          width="300"
+          height="300"
+          class="px-3"
+        /> -->
+        <div class="result pl-2 py-2" id="note" style="display: none">
+          Please ensure you print this completed PDF Dutch Lipid Clinic Network
+          Criteria (DLNC) questionnaire and bring it with you to your next
+          consultation with Professor Kostner for review and discussion.
+        </div>
+        <button
+          id="downloadPdf"
+          style="display: none; margin-top: 10px"
+          class="cursor-pointer rounded-3xl py-2 px-4 bg-amber-600 transition-all outline-1 outline-transparent outline-offset-2 hover:outline-amber-700 hover:outline-2 duration-300"
+        >
+          Generate PDF
+        </button>
+      </div>
+    </section>
+    <script type="module" src="/src/main.ts"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.12/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.12/vfs_fonts.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      function calculateScore() {
+        let score = 0;
+
+        // --- Q2 combined rule (ONLY ONCE) ---
+        let q2a = $("input[name='q2a']:checked").val();
+        let q2b = $("input[name='q2b']:checked").val();
+        let q2c = $("input[name='q2c']:checked").val();
+
+        if (q2a === "yes" || q2b === "yes" || q2c === "yes") {
+          score += 2;
+        }
+        let q1a = $("input[name='q1a']:checked").val();
+        let q1b = $("input[name='q1b']:checked").val();
+
+        if (q1a === "yes" || q1b === "yes") {
+          score += 1;
+        }
+
+        // --- all other radio questions EXCEPT Q2 ---
+        $("input[type=radio]").each(function () {
+          let name = $(this).attr("name");
+
+          // skip Q2 radios
+          if (name === "q2a" || name === "q2b" || name === "q2c") return;
+          if (name === "q1a" || name === "q1b") return;
+
+          if ($(this).is(":checked")) {
+            score += parseInt($(this).val());
+          }
+        });
+
+        // --- diagnosis ---
+        let diagnosis = "";
+
+        if (score > 8) diagnosis = "Definite FH";
+        else if (score >= 6) diagnosis = "Probable FH";
+        else if (score >= 3) diagnosis = "Possible FH";
+        else diagnosis = "Unlikely FH";
+
+        $("#result").html("Total Score: " + score + "<br>Result: " + diagnosis);
+        // show button after result
+        $("#downloadPdf").show();
+        $("#barcode").show();
+        $("#note").show();
+
+        // attach data for pdf
+        let output = { score, diagnosis };
+        $("#downloadPdf").data("text", output);
+        $("#downloadPdf").data("score", score);
+        $("#downloadPdf").data("diagnosis", diagnosis);
+      }
+
+      $(document).ready(function () {
+        $("#downloadPdf").on("click", function () {
+          const pdfFileName = "result.pdf";
+          const score = $("#downloadPdf").data("score");
+          const diagnosis = $("#downloadPdf").data("diagnosis");
+          const name = $("#name").val() || "Not provided";
+          function getAnswer(name) {
+            let selectedInput = $(`input[name='${name}']:checked`);
+
+            if (!selectedInput.length) return "Not answered";
+
+            let value = selectedInput.val();
+
+            if (name === "ldl") {
+              const ldlMap = {
+                8: "≥8.5 mmol/L",
+                5: "6.5–8.4 mmol/L",
+                3: "5.0–6.4 mmol/L",
+                1: "4.0–4.9 mmol/L",
+                0: "I don’t know / lower",
+              };
+              return ldlMap[value] || value;
+            }
+
+            if (value === "yes") return "Yes";
+            if (value === "no") return "No";
+
+            const num = Number(value);
+            if (!isNaN(num)) {
+              if (num >= 1) return "Yes";
+              if (num === 0) return "No";
+            }
+
+            return value;
+          }
+
+          const docDefinition = {
+            content: [
+              {
+                text: `Name: ${name}`,
+                style: "body",
+                margin: [0, 0, 0, 10],
+              },
+              {
+                text: `1. Did you have coronary artery disease BEFORE age 55 (men) or 60 (women)?}`,
+                style: "body",
+              },
+              {
+                text: `${getAnswer("q3")}`,
+                style: "body",
+                margin: [20, 0, 0, 0],
+              },
+              {
+                text: `2. Did you had a cerebral or peripheral vascular disease BEFORE the age of 55 for men, or 60 for woman?`,
+                style: "body",
+              },
+              {
+                text: `${getAnswer("q4")}`,
+                style: "body",
+                margin: [20, 0, 0, 0],
+              },
+              {
+                text: `3. Do you have a parent, brother or sister that had any premature vascular dissease (heart attack, stroke or peripheral artery disease) BEFORE the age of 55 for men, or 60 for woman?`,
+                style: "body",
+              },
+              {
+                text: `${getAnswer("q1a")}`,
+                style: "body",
+                margin: [20, 0, 0, 0],
+              },
+              {
+                text: `4. Select your highest known LDL cholesterol level`,
+                style: "body",
+              },
+              {
+                text: `${getAnswer("ldl")}`,
+                style: "body",
+                margin: [20, 0, 0, 0],
+              },
+              {
+                text: `5. Do you have a parent, brother or sister that had been told they have LDL level ("bad cholesterol") above 6 mmol/L or above the 95th percentile?`,
+                style: "body",
+              },
+              {
+                text: `${getAnswer("q1b")}`,
+                style: "body",
+                margin: [20, 0, 0, 0],
+              },
+              {
+                text: `6. If yes, did they have very high LDL ("bad cholesterol") before the age of 18?}`,
+                style: "body",
+              },
+              {
+                text: `${getAnswer("q2b")}`,
+                style: "body",
+                margin: [20, 0, 0, 0],
+              },
+              {
+                text: `7. Have you been told you have a genetic mutation causing familial hypercholesterolemia such as LDLR, APOB or PCSK9 genes or very high LP(a) levels?`,
+                style: "body",
+              },
+              {
+                text: `${getAnswer("q7")}`,
+                style: "body",
+                margin: [20, 0, 0, 0],
+              },
+
+              {
+                text: `8. Do you have any firm, fatty lumps around their tendons (like the Achilles tendon or hands)?`,
+                style: "body",
+              },
+              {
+                text: `${getAnswer("q5")}`,
+                style: "body",
+                margin: [20, 0, 0, 0],
+              },
+              {
+                text: `9. Do you have a parent, brother or sister that have any firm, fatty lumps around their tendons (like the Achilles tendon or hands)?`,
+                style: "body",
+              },
+              {
+                text: `${getAnswer("q2a")}`,
+                style: "body",
+                margin: [20, 0, 0, 0],
+              },
+              {
+                text: `10. Did you develop a grey or white ring around the coloured part of their eyes (arcus cornealis) before the age of 45?`,
+                style: "body",
+              },
+              {
+                text: `${getAnswer("q6")}`,
+                style: "body",
+                margin: [20, 0, 0, 0],
+              },
+              {
+                text: `11. Do you have a parent, brother or sister that had developed a grey or white ring around the coloured part of their eyes (arcus cornealis) before the age of 45?`,
+                style: "body",
+              },
+              {
+                text: `${getAnswer("q2c")}`,
+                style: "body",
+                margin: [20, 0, 0, 0],
+              },
+              {
+                text: `Final Score: ${score}`,
+                style: "body",
+                margin: [0, 10, 0, 0],
+              },
+
+              {
+                text: `Result ${diagnosis} `,
+                style: "body",
+              },
+              {
+                text: `Please ensure you print this completed Dutch Lipid Clinic Network Criteria (DLNC) questionnaire and bring it with you to your next consultation with Professor Kostner for review and discussion.`,
+                style: "body",
+                margin: [0, 10, 0, 0],
+              },
+            ],
+            styles: {
+              body: { fontSize: 10, margin: [0, 2, 0, 2] },
+            },
+          };
+
+          pdfMake.createPdf(docDefinition).download(pdfFileName);
+        });
+      });
+
+      // $("#copyAnswers").on("click", function () {
+      //   function getAnswer(name) {
+      //     let selectedInput = $(`input[name='${name}']:checked`);
+      //     if (!selectedInput.length) return "Not answered";
+
+      //     let value = selectedInput.val();
+
+      //     if (name === "ldl") {
+      //       const ldlMap = {
+      //         8: "≥8.5 mmol/L",
+      //         5: "6.5–8.4 mmol/L",
+      //         3: "5.0–6.4 mmol/L",
+      //         1: "4.0–4.9 mmol/L",
+      //         0: "I don’t know / lower",
+      //       };
+      //       return ldlMap[value] || value;
+      //     }
+
+      //     if (value === "yes") return "Yes";
+      //     if (value === "no") return "No";
+
+      //     const num = Number(value);
+      //     if (!isNaN(num)) {
+      //       if (num >= 1) return "Yes";
+      //       if (num === 0) return "No";
+      //     }
+
+      //     return value;
+      //   }
+
+      //   const score = $("#downloadPdf").data("score");
+      //   let diagnosis = $("#downloadPdf").data("diagnosis");
+
+      //   const output = `
+      // DLNC Questionnaire Results
+
+      // 1: ${getAnswer("q3")}
+      // 2: ${getAnswer("q4")}
+      // 3: ${getAnswer("q1a")}
+      // 4: ${getAnswer("ldl")}
+      // 5: ${getAnswer("q1b")}
+      // 6: ${getAnswer("q2b")}
+      // 7: ${getAnswer("q7")}
+      // 8: ${getAnswer("q5")}
+      // 9: ${getAnswer("q2a")}
+      // 10: ${getAnswer("q6")}
+      // 11: ${getAnswer("q2c")}
+
+      // Final Score: ${score}
+      // Result: ${diagnosis}
+      // `;
+      //   const qrUrl =
+      //     "https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=" +
+      //     encodeURIComponent(output);
+
+      //   $("#barcode").attr("src", qrUrl);
+      //   // navigator.clipboard
+      //   //   .writeText(output)
+      //   //   .then(() => alert("Copied to clipboard"));
+      // });
+    </script>
+  </body>
+  <footer class="bg-darkerblue text-white relative inset-x-0 bottom-0">
+    <section
+      class="grid grid-cols-1 md:grid-cols-6 space-y-5 text-center md:text-left mx-auto px-5 py-12 max-w-3xl"
+    >
+      <div class="col-span-1 md:col-span-2 hidden md:flex">
+        <ul class="space-y-2 pt-12">
+          <li><a href="aboutus.html" class="hover:underline">About Us</a></li>
+          <li><a href="research.html" class="hover:underline">Research</a></li>
+          <li><a href="faq.html" class="hover:underline">FAQ</a></li>
+          <li>
+            <a href="forpractitioners.html" class="hover:underline"
+              >Practitioners Info</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="col-span-1 md:col-span-2">
+        <h3 class="text-lg font-bold mb-4">Contact</h3>
+        <ul class="space-y-2">
+          <li>
+            <p class="text-gray-400">Phone:</p>
+            <a
+              href="tel:+61466886904"
+              class="hover:underline"
+              onclick="myFunction()"
+              >+61 466 886 904</a
+            >
+          </li>
+
+          <li>
+            <p class="text-gray-400">Email:</p>
+            <a
+              class="hover:underline"
+              onclick="showAlert('info@cholesterolcare.com.au', 'email')"
+            >
+              info@cholesterolcare.com.au
+            </a>
+          </li>
+
+          <li>
+            <p class="text-gray-400">Fax:</p>
+            <a class="hover:underline" onclick="showAlert('0737404777', 'fax')">
+              (07) 3740 4777
+            </a>
+          </li>
+
+          <!-- Reusable Alert container -->
+          <div
+            id="global-alert"
+            class="fixed top-0 left-0 w-full z-60 transform -translate-y-full transition-transform duration-300 p-4 text-sm text-fg-brand-strong rounded-b-base bg-amber-700 shadow-lg"
+            role="alert"
+          >
+            <div class="flex items-center justify-between max-w-3xl mx-auto">
+              <div class="flex items-center">
+                <svg
+                  class="w-4 h-4 shrink-0 me-2"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M10 11h2v5m-2 0h4m-2.592-8.5h.01M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                  />
+                </svg>
+                <span class="sr-only">Info</span>
+                <h3 class="font-extralight" id="alert-message"></h3>
+              </div>
+              <button
+                type="button"
+                aria-label="Close"
+                onclick="hideAlert()"
+                class="ms-auto -mx-1.5 -my-1.5 rounded cursor-pointer brand-medium hover:bg-brand-soft inline-flex items-center justify-center h-8 w-8 shrink-0"
+              >
+                <span class="sr-only">Close</span>
+                <svg
+                  class="w-4 h-4"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M6 18 17.94 6M18 18 6.06 6"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <script>
+            let alertTimeout;
+
+            function showAlert(value, type) {
+              // Copy to clipboard
+              navigator.clipboard.writeText(value);
+
+              // Update alert message dynamically
+              const messageEl = document.getElementById("alert-message");
+              if (type === "email") {
+                messageEl.innerHTML = `The email address <b class="font-bold">${value}</b> has been copied to your clipboard!`;
+              } else if (type === "fax") {
+                messageEl.innerHTML = `The fax number <b class="font-bold">(07) 3740 4777</b> has been copied to your clipboard!`;
+              } else {
+                messageEl.innerHTML = `<b class="font-bold">Error</b>`;
+              }
+
+              // Show alert
+              const alertDiv = document.getElementById("global-alert");
+              alertDiv.classList.remove("-translate-y-full");
+              alertDiv.classList.add("translate-y-0");
+
+              // Clear previous timeout if exists
+              if (alertTimeout) clearTimeout(alertTimeout);
+
+              // Auto-hide after 3 seconds
+              alertTimeout = setTimeout(() => {
+                hideAlert();
+              }, 3000);
+            }
+
+            function hideAlert() {
+              const alertDiv = document.getElementById("global-alert");
+              alertDiv.classList.remove("translate-y-0");
+              alertDiv.classList.add("-translate-y-full");
+            }
+          </script>
+          <!-- <li>
+            <p class="text-gray-400">Fax:</p>
+            <a href="#" class="hover:underline" onclick="myFunctionFax()"
+              >(07) 3740 4777</a
+            >
+            <script>
+              function myFunctionFax() {
+                navigator.clipboard.writeText("0737404777");
+                alert("Copied the phone number: " + "(07) 3740 4777");
+              }
+            </script>
+          </li>
+          <li>
+            <p class="text-gray-400">Email:</p>
+            <a href="#" class="hover:underline" onclick="myFunctionEmail()">info@cholesterolcare.com.au</a>
+            <script>
+              function myFunctionEmail() {
+                navigator.clipboard.writeText("info@cholesterolcare.com.au");
+                alert("Copied the email address: " + "info@cholesterolcare.com.au");
+              }
+            </script>
+          </li> -->
+
+          <!-- <li>
+            <p class="text-gray-400">Email:</p>
+            <a
+              href="mailto:info@cholesterolcare.com.au?subject=Hello&body=I would like to know more about your services."
+              class="hover:underline"
+              >info@cholesterolcare.com.au</a
+            >
+          </li> -->
+        </ul>
+      </div>
+      <div class="col-span-1 md:col-span-2">
+        <h3 class="text-lg font-bold mb-4">Location</h3>
+        <ul class="space-y-2">
+          <li>
+            <p class="text-gray-400">Address:</p>
+            <a
+              href="https://maps.app.goo.gl/W57J6abFzE3QadEE6"
+              class="hover:underline"
+              >Suite 19, Level 2, Taylor Medical Center, 40 Annerley Road,
+              Woolloongabba<svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-4 mb-1 ml-1 inline-block"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
+                />
+              </svg> </a
+            ><br />
+            <a
+              href="findus.html#information"
+              class="my-4 mb-8 inline-block bg-amber-700 rounded-full py-2 px-5 outline-1 outline-transparent outline-offset-2 hover:outline-amber-700 hover:outline-2 transition-all duration-300"
+              >Getting here</a
+            >
+          </li>
+        </ul>
+      </div>
+    </section>
+  </footer>
+</html>

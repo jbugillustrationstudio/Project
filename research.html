@@ -9,6 +9,10 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.2"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1"
+      type="module"
+    ></script>
     <link rel="stylesheet" href="src/style.css" />
     <style type="text/tailwindcss">
       @theme {
@@ -22,7 +26,7 @@
     class="bg-slate-950 text-white selection:bg-amber-300 selection:text-emerald-900"
   >
     <nav
-      class="flex items-center justify-between px-6 sm:px-16 lg:px-24 xl:px-32 py-4 border-b border-gray-300 bg-white relative transition-all z-50 delay-100"
+      class="relative flex items-center justify-between px-6 sm:px-16 lg:px-24 xl:px-32 py-4 border-b border-gray-300 bg-white transition-all z-50 delay-100"
     >
       <a href="index.html">
         <img
@@ -67,13 +71,21 @@
         <a
           href="research.html"
           class="block w-full px-3 my-1 py-1 rounded-full outline-transparent hover:outline-amber-700 hover:outline-2 transition-all duration-300"
-          >Research</a
-        >
+          >Research
+          <hr class="mt-4 border-t border-amber-800/20"
+        /></a>
+
         <a
           href="faq.html"
           class="block w-full px-3 my-1 py-1 rounded-full outline-transparent hover:outline-amber-700 hover:outline-2 transition-all duration-300"
           >FAQ</a
         >
+        <a
+          href="fhcalculator.html"
+          class="block w-full px-3 my-1 py-1 rounded-full outline-transparent hover:outline-amber-700 hover:outline-2 transition-all duration-300"
+          >FH Calculator
+          <hr class="mt-4 border-t border-amber-800/20"
+        /></a>
         <a
           href="forpractitioners.html"
           class="mt-2 ml-2 inline-block text-white font-medium py-2 px-4 bg-linear-to-tr from-amber-700 to-yellow-600 rounded-full outline-1 outline-transparent outline-offset-2 hover:outline-amber-700 hover:outline-4 hover:opacity-80 transition-all duration-300"
@@ -98,44 +110,46 @@
           class="py-2 px-4 hover:underline hover:underline-offset-3"
           >Research</a
         >
-        <a
-          href="faq.html"
-          class="py-2 px-4 hover:underline hover:underline-offset-3"
-          >FAQ</a
-        >
-
-        <!-- <div
-          class="hidden lg:flex items-center text-sm gap-2 border border-gray-300 px-3 rounded-full"
-        >
-          <input
-            class="py-1.5 w-full bg-transparent outline-none placeholder-gray-500"
-            type="text"
-            placeholder="Search products"
-          />
-          <svg
-            width="16"
-            height="16"
-            viewBox="0 0 16 16"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
+        <el-dropdown class="inline-block mr-2">
+          <button
+            class="cursor-pointer inline-flex w-full justify-center gap-x-1.5 rounded-full bg-white px-3 py-2 text-sm font-semibold text-amber-700 shadow-xs inset-ring-1 inset-ring-amber-700 hover:bg-gray-100"
           >
-            <path
-              d="M10.836 10.615 15 14.695"
-              stroke="#7A7B7D"
-              stroke-width="1.2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-            <path
-              clip-rule="evenodd"
-              d="M9.141 11.738c2.729-1.136 4.001-4.224 2.841-6.898S7.67.921 4.942 2.057C2.211 3.193.94 6.281 2.1 8.955s4.312 3.92 7.041 2.783"
-              stroke="#7A7B7D"
-              stroke-width="1.2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
-        </div> -->
+            More
+            <svg
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              data-slot="icon"
+              aria-hidden="true"
+              class="-mr-1 size-5 text-amber-700"
+            >
+              <path
+                d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
+                clip-rule="evenodd"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </button>
+
+          <el-menu
+            anchor="bottom end"
+            popover
+            class="w-56 origin-top-right rounded-md bg-white shadow-lg outline-1 outline-black/5 transition transition-discrete [--anchor-gap:--spacing(2)] data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in"
+          >
+            <div class="py-1">
+              <a
+                href="faq.html"
+                class="block px-4 py-2 text-sm text-amber-700 focus:bg-gray-100 focus:text-gray-900 focus:outline-hidden"
+                >FAQ</a
+              >
+              <a
+                href="fhcalculator.html"
+                class="block px-4 py-2 text-sm text-amber-700 focus:bg-gray-100 focus:text-gray-900 focus:outline-hidden"
+                >FH Calculator</a
+              >
+            </div>
+          </el-menu>
+        </el-dropdown>
+
         <a
           href="forpractitioners.html"
           class="inline-block text-white font-medium py-2 px-4 bg-linear-to-tr from-amber-700 to-yellow-600 rounded-full outline-1 outline-transparent outline-offset-2 hover:outline-amber-700 hover:outline-4 hover:opacity-80 transition-all duration-300"
